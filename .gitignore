@@ -1,0 +1,17 @@
+# Ignore the .vscode folder except for shared configs.
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# JetBrains IDEs
+.idea
+
+node_modules/
+dist/
+
+.env
+.npmrc
+npmrc.zip
+.DS_Store
+*.log
+gitleaks-report.json
