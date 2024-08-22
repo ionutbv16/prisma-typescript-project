@@ -3,7 +3,7 @@ import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { PrismaClient } from '@prisma/client';
 import { resolvers as allResolvers } from '../resolvers';
-import {projectsTypeDefs } from '../type-defs'
+import {projectsTypeDefs } from '../type-defs';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer'
 import http from 'http';
 import cors from 'cors';
@@ -22,7 +22,7 @@ export async function createAppServer(app: Application) {
     typeDefs,
     resolvers,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
-  })
+  });
   await server.start();
   app.use(express.json());
  
